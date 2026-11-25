@@ -1,0 +1,19 @@
+Item,Designator,Qty,Manufacturer,Mfg Part #,Description,Package,Type,Side,Notes
+1,U1,1,Seeed Studio,113991114,"XIAO ESP32S3 module (plain, not Sense)",Castellated module 21 x 17.8 mm,SMD,Bottom,"Bottom side; USB-C overhangs the board edge by design. Reflow pads 1-14. After reflow, hand-solder the module's BAT+/BAT- underside pads from the TOP side through the two plated slots (no paste in the slots; do not bridge them: battery short)"
+2,U2,1,Texas Instruments,PCA9555DWR,16-bit I2C I/O expander,SOIC-24 wide (7.5 mm),SMD,Bottom,"Do not substitute: footprint is SOIC-24 (TCA9555 is TSSOP only)"
+3,U3,1,Texas Instruments,LP5907MFX-3.0/NOPB,"LDO 3.0 V 250 mA, with enable",SOT-23-5,SMD,Bottom,
+4,U4,1,Texas Instruments,TPS22917DBVR,"Load switch 5.5 V 2 A, active-high ON",SOT-23-6,SMD,Bottom,Do not substitute
+5,"J1, J2",2,Molex,5051100592,"FFC/FPC connector 5-pos 0.5 mm pitch, bottom contact, right angle",SMD,SMD,Bottom,Do not substitute (must be bottom contact)
+6,J3,1,JST,B2B-PH-SM4-TB(LF)(SN),"PH 2-pin header, vertical (top entry)",SMD,SMD,Bottom,
+7,"J4, J5",2,JST,S3B-PH-SM4-TB(LF)(SN),"PH 3-pin header, side entry",SMD,SMD,Bottom,
+8,"LED1, LED2",2,Wurth Elektronik,1315050930002,WL-ICLED addressable RGB LED (WS2812 protocol),PLCC4 5.0 x 5.4 mm,SMD,Top,"Top side. MSL 3. Pin 1 = chamfered-corner orientation mark, at the silkscreen dot"
+9,"C1, C2, C5, C6, C11, C12",6,Yageo,CC0805KRX7R9BB104,Capacitor 100 nF 50 V X7R 10%,0805,SMD,Bottom,Equivalent 0805 X7R >=25 V OK
+10,"C3, C4, C13",3,KYOCERA AVX,08055C105KAT2A,Capacitor 1 uF 50 V X7R 10%,0805,SMD,Bottom,Equivalent 0805 X7R >=25 V OK
+11,"C7, C8, C9, C10",4,Samsung Electro-Mechanics,CL21B103KBANNNC,Capacitor 10 nF 50 V X7R 10%,0805,SMD,Bottom,Equivalent 0805 X7R >=25 V OK
+12,"R1, R2",2,Yageo,RC0805FR-07220KL,Resistor 220 kohm 1%,0805,SMD,Bottom,Equivalent 0805 1% thick film OK
+13,"R3, R4",2,Yageo,RC0805FR-074K7L,Resistor 4.7 kohm 1%,0805,SMD,Bottom,Equivalent 0805 1% thick film OK
+14,R5,1,Yageo,RC0805FR-0710KL,Resistor 10 kohm 1%,0805,SMD,Bottom,Equivalent 0805 1% thick film OK
+15,"R6, R10",2,Yageo,RC0805FR-07330RL,Resistor 330 ohm 1%,0805,SMD,Bottom,Equivalent 0805 1% thick film OK
+16,R7,1,Yageo,RC0805FR-0722KL,Resistor 22 kohm 1%,0805,SMD,Bottom,Equivalent 0805 1% thick film OK
+17,R8,1,Yageo,RC0805FR-0733KL,Resistor 33 kohm 1%,0805,SMD,Bottom,Equivalent 0805 1% thick film OK
+18,R9,1,Yageo,RC0805FR-07100KL,Resistor 100 kohm 1%,0805,SMD,Bottom,Equivalent 0805 1% thick film OK

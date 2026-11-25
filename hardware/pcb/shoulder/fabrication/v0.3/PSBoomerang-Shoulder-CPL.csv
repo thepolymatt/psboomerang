@@ -1,0 +1,4 @@
+Designator,Mid X(mm),Mid Y(mm),Layer,Rotation,Value,Package
+J1,115.000,-89.300,Bottom,0,Main_Board,JST_PH_S3B-PH-SM4-TB_1x03-1MP_P2.00mm_Horizontal
+SW1,115.000,-85.000,Top,0,L1/R1 (upper),PTS526SM15SMTR2LFS
+SW2,115.000,-93.600,Top,0,L2/R2 (lower),PTS526SM15SMTR2LFS

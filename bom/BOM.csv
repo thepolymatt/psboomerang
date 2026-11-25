@@ -1,0 +1,26 @@
+Designator,Qty,Description,Manufacturer,MPN,Package,LCSC,DigiKey,Notes
+U1,1,XIAO ESP32-S3 module (plain; not Sense),Seeed Studio,113991114,Castellated module,,,Buy from Seeed or a distributor. U.FL antenna only (the antenna ships in the box). BAT+/BAT- pads are on the underside: see docs/PCB-Notes.md for soldering them through the plated slots
+U2,1,16-bit I2C I/O expander with 100k internal pull-ups,Texas Instruments,PCA9555DWR,"SOIC-24, 1.27 mm pitch",C2652274,296-20973-1-ND,"Same pinout and registers as TCA9555, which has no SOIC package. Address 0x20 (A0-A2 to GND). Alt: TCA9555PWR (TSSOP-24 0.65 mm, LCSC C465732)"
+U3,1,3.0 V low-noise LDO with enable (stick supply),Texas Instruments,LP5907MFX-3.0/NOPB,SOT-23-5,C475492,296-40357-1-ND,Needs 1 uF in and out. Drop-in alt: TPS7A2030PDBVR (LCSC C963429)
+U4,1,"Load switch 5.5 V 2 A, active-high ON (cuts LED power in sleep)",Texas Instruments,TPS22917DBVR,SOT-23-6,C2681320,,"10 nA off, 0.5 uA on, ~90 mOhm. ON = STICK_EN. CT and QOD left open. Not the TPS22917L, which has an active-low ON"
+J1 J2,2,"FPC connector, 5-pos 0.5 mm, bottom contact (Joy-Con stick flex)",Molex,5051100592,SMT right-angle 1.9 mm,C3168457,WM12361CT-ND,"Finest pitch on the board: fine tip, plenty of flux, check for bridges. Bottom-contact only, so a flipped flex just doesn't connect. Don't substitute a dual-contact connector such as the Hirose FH34SRJ: see docs/PCB-Notes.md"
+J3,1,"JST PH 2-pin SMT vertical (top entry), battery",JST,B2B-PH-SM4-TB(LF)(SN),SMT,,,Battery polarity isn't standardized between vendors; check before plugging in
+SW1-SW11,11,"Carbon contact pads on the main board (D-pad, face, Select, Start, Home): PCB copper, no part",—,PSBoomerang:CarbonPad_DPad / _Face / _2Pill / _3Pill,Interdigitated ENIG contact,,,Order the board with ENIG finish. D-pad/face: 5.5 mm round for 4.5 mm pills; Select/Start: 2 x 3 mm pills; Home: 3 x 3 mm pills (4.5 mm pitch)
+—,1 set,PS3 DualShock 3 replacement conductive rubber pads,Generic,DualShock 3 conductive pad set,,,,Pills: D-pad/face 4.5 mm; Start/Select 2 x 3 mm and Home 3 x 3 mm on a 4.5 mm pitch
+Shoulder board SW1 SW2 (x2 boards),4,"Tactile switch, top-actuated, on the shoulder daughterboards (L1/R1 upper, L2/R2 lower)",C&K,PTS526 SM15 SMTR2 LFS,"5.2x5.2x1.5 mm SMT, exposed legs",C2689538,,Footprint SamacSys:PTS526SM15SMTR2LFS. Pads 1+2 = COM, 3+4 = NO; all four are wired
+J4 J5 + shoulder board J1 (x2 boards),4,"JST PH 3-pin SMT side-entry, shoulder cable (main board J4/J5, one per shoulder board)",JST,S3B-PH-SM4-TB(LF)(SN),SMT,,,"Same part on both ends. Pin 1 upper (L1/R1), 2 lower (L2/R2), 3 GND"
+Shoulder cables,2,"JST PH 3-pin cable, socket both ends, pin 1 to pin 1",JST,PHR-3 + SPH-002T-P0.5S,,,,"Or pre-crimped PH leads. Length set by the enclosure. A reversed cable loses L2/R2"
+LED1 LED2,2,"Addressable RGB LED (WL-ICLED), WS2812 protocol, top-emitting",Würth Elektronik,1315050930002,"5.0x5.4x1.58 mm, pads protrude past body",,,"VDD 3.5-5.5 V: power from LED_VDD (+BATT through U4). VIH 0.7*VDD (2.94 V at 4.2 V), so 3.3 V data has ~0.36 V margin at full charge. Pinout differs from WS2812B (1 VSS, 2 DIN, 3 VDD, 4 DOUT): use the SamacSys:1315050930002 symbol and footprint. ~1 mA standby each, so U4 cuts their power in sleep. Iron-solderable pads"
+R10,1,"Resistor 330R 1% 0805, LED1 DOUT to LED2 DIN series",Yageo,RC0805FR-07330RL,0805,C17630,311-330CRCT-ND,Series protection on the data line between LEDs
+R1 R2,2,"Resistor 220k 1% 0805, battery divider",Yageo,RC0805FR-07220KL,0805,C17556,311-220KCRCT-ND,LCSC alt: UNI-ROYAL 0805W8F2203T5E (C17556)
+R3 R4,2,"Resistor 4.7k 1% 0805, I2C pull-ups",Yageo,RC0805FR-074K7L,0805,C17673,311-4.70KCRCT-ND,LCSC alt: UNI-ROYAL 0805W8F4701T5E (C17673)
+R5,1,"Resistor 10k 1% 0805, Home button pull-up",Yageo,RC0805FR-0710KL,0805,C17414,311-10.0KCRCT-ND,LCSC alt: UNI-ROYAL 0805W8F1002T5E (C17414)
+R6,1,"Resistor 330R 1% 0805, LED data series",Yageo,RC0805FR-07330RL,0805,C17630,311-330CRCT-ND,LCSC alt: UNI-ROYAL 0805W8F3300T5E (C17630)
+R7,1,"Resistor 22k 1% 0805, USB 5 V sense (top)",Yageo,RC0805FR-0722KL,0805,C17560,311-22.0KCRCT-ND,LCSC alt: UNI-ROYAL 0805W8F2202T5E (C17560)
+R8,1,"Resistor 33k 1% 0805, USB 5 V sense (bottom)",Yageo,RC0805FR-0733KL,0805,C17633,,5% is fine (2.88-3.12 V on D7). 5.0 V in gives 3.0 V on D7. LCSC alt: UNI-ROYAL 0805W8F3302T5E (C17633)
+R9,1,"Resistor 100k 1% 0805, stick LDO enable pull-down",Yageo,RC0805FR-07100KL,0805,C149504,311-100KCRCT-ND,"LCSC alt: UNI-ROYAL 0805W8F1003T5E (C149504); if ordering from LCSC use C149504, not C17407"
+C1 C2 C5 C6 C11 C12,6,Capacitor 100nF X7R 50V 0805,Yageo,CC0805KRX7R9BB104,0805,C49678,311-1140-1-ND,"Battery ADC, expander, stick V+ (x2), LEDs (x2)"
+C3 C4 C13,3,"Capacitor 1uF X7R 50V 0805, LDO in/out, U4 in",KYOCERA AVX,08055C105KAT2A,0805,,478-KGM21AR71H105KUCT-ND,"50 V X7R, so DC-bias loss at 3.3 V is negligible. LCSC alt: Samsung CL21B105KBFNNNE (C28323)"
+C7-C10,4,"Capacitor 10nF X7R 50V 0805, stick ADC inputs",Samsung,CL21B103KBANNNC,0805,C1710,1276-1015-1-ND,
+STICK,2,TMR Joy-Con replacement analog stick,BRONAL,Amazon B0DFB8L1NP,5-pin 0.5 mm FPC,,,One pack contains 2. Flex pinout: 1 V+, 2 Y, 3 S, 4 G, 5 X
+BT1,1,LiPo 1S 3.7 V with JST-PH lead,Generic,—,,,,"Capacity set by the enclosure. The XIAO charges at about 100 mA, so ~500-1000 mAh charges in 5-10 h"

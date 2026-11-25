@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PSBoomerang")(type "KiCad")(uri "${KIPRJMOD}/../lib/PSBoomerang.kicad_sym")(options "")(descr "PSBoomerang project parts"))
+  (lib (name "SamacSys")(type "KiCad")(uri "${KIPRJMOD}/../lib/SamacSys.kicad_sym")(options "")(descr "SamacSys / SnapMagic parts used by PSBoomerang"))
+)

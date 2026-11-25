@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "PSBoomerang")(type "KiCad")(uri "${KIPRJMOD}/../lib/PSBoomerang.pretty")(options "")(descr "PSBoomerang project footprints"))
+  (lib (name "SamacSys")(type "KiCad")(uri "${KIPRJMOD}/../lib/SamacSys.pretty")(options "")(descr "SamacSys / SnapMagic parts used by PSBoomerang"))
+  (lib (name "Logos")(type "KiCad")(uri "${KIPRJMOD}/../lib/Logos.pretty")(options "")(descr "Logos used by PSBoomerang"))
+)
